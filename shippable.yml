@@ -16,7 +16,9 @@ env:
 before_install:
   - which heroku || wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
   - heroku plugins:install heroku-docker
-
+  - curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+  - chmod +x /usr/local/bin/docker-compose
+  
 install:
   - source ~/.nvm/nvm.sh && nvm install 0.12
   - node --version
@@ -45,6 +47,7 @@ before_script:
 
 after_success:
   - test -f ~/.ssh/id_rsa.heroku || ssh-keygen -y -f /tmp/ssh/00_sub > ~/.ssh/id_rsa.heroku && heroku keys:add ~/.ssh/id_rsa.heroku
+  - docker-compose build
   - heroku docker:release --app shippable-docker-1001   
 #  - git remote -v | grep ^heroku || heroku git:remote --ssh-git --app shippable-heroku-1001
 #  - git push -f heroku master
