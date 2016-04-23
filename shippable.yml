@@ -12,7 +12,7 @@ env:
   global:
     - SLACK_HOOK_URL=https://hooks.slack.com/services/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
     - APP_NAME=shippable-docker-1001 
-- secure: ZKwiIGRLRxWZhC9p5BZjvzq6+rl2VlQf7HUnkhn+gE9MM/4eauY+ChmRQEOPT0ZAuraj3yFtZ9zpDWEcCpU3Mk72GmAhgRZLDmMRhSNhykNmwCIhvxCQU2GQWcmoHCKCgiaFCk7zz/l/+/8BItd6sjQOcVQ6kPzg3ywxs6vyDI5OBvVxbzyNfjF1vwR+Ot7x3ifxWIkioOV0spZxKuQHbtVnKAeOWh4jYhGR/OwrCpWhAcez2jWXkTMDqZ3R4cbAkWi9l7kb+lIUvY/irg6c84UE2V23naKX+toToStGPHKYKzFcUL9AFWXXi7higxJ6UAEyNSXv4rgZlSV1u6yhvw==  
+    - secure: ZKwiIGRLRxWZhC9p5BZjvzq6+rl2VlQf7HUnkhn+gE9MM/4eauY+ChmRQEOPT0ZAuraj3yFtZ9zpDWEcCpU3Mk72GmAhgRZLDmMRhSNhykNmwCIhvxCQU2GQWcmoHCKCgiaFCk7zz/l/+/8BItd6sjQOcVQ6kPzg3ywxs6vyDI5OBvVxbzyNfjF1vwR+Ot7x3ifxWIkioOV0spZxKuQHbtVnKAeOWh4jYhGR/OwrCpWhAcez2jWXkTMDqZ3R4cbAkWi9l7kb+lIUvY/irg6c84UE2V23naKX+toToStGPHKYKzFcUL9AFWXXi7higxJ6UAEyNSXv4rgZlSV1u6yhvw==  
 before_install:
   - which heroku || wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
   - heroku plugins:install heroku-docker
