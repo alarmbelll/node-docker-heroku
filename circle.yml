@@ -36,6 +36,6 @@ jobs:
       # run tests!
       - run: yarn test
       
-      test 
+      test:
         override:
             -echo "test"
