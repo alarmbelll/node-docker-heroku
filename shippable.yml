@@ -10,7 +10,6 @@ node_js:
 # The path for Xunit to output test reports
 env:
   global:
-    - SLACK_HOOK_URL=https://hooks.slack.com/services/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
     - APP_NAME=obscure-dusk-97601
     - secure: 57ab9324-e393-474d-af00-db31882aaeb4
 before_install:
@@ -49,7 +48,7 @@ before_script:
 after_success:
   - test -f ~/.ssh/id_rsa.heroku || ssh-keygen -y -f /tmp/ssh/00_sub > ~/.ssh/id_rsa.heroku && heroku keys:add ~/.ssh/id_rsa.heroku
   - docker-compose build
-  - heroku docker:release --app shippable-docker-1001   
+  - heroku docker:release --app obscure-dusk-97601   
 #  - git remote -v | grep ^heroku || heroku git:remote --ssh-git --app shippable-heroku-1001
 #  - git push -f heroku master
 #  - node node_modules/slack-shippable/index.js -s
