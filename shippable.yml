@@ -11,15 +11,14 @@ node_js:
 env:
   global:
     - SLACK_HOOK_URL=https://hooks.slack.com/services/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
-    - APP_NAME=shippable-docker-1001 
-    - secure: ZKwiIGRLRxWZhC9p5BZjvzq6+rl2VlQf7HUnkhn+gE9MM/4eauY+ChmRQEOPT0ZAuraj3yFtZ9zpDWEcCpU3Mk72GmAhgRZLDmMRhSNhykNmwCIhvxCQU2GQWcmoHCKCgiaFCk7zz/l/+/8BItd6sjQOcVQ6kPzg3ywxs6vyDI5OBvVxbzyNfjF1vwR+Ot7x3ifxWIkioOV0spZxKuQHbtVnKAeOWh4jYhGR/OwrCpWhAcez2jWXkTMDqZ3R4cbAkWi9l7kb+lIUvY/irg6c84UE2V23naKX+toToStGPHKYKzFcUL9AFWXXi7higxJ6UAEyNSXv4rgZlSV1u6yhvw==  
+    - APP_NAME=obscure-dusk-97601
+    - secure: 57ab9324-e393-474d-af00-db31882aaeb4
 before_install:
   - which heroku || wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
   - heroku plugins:install heroku-docker
   - curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
   - chmod +x /usr/local/bin/docker-compose
-  - APP_NAME=obscure-dusk-97601
-  - seurce:57ab9324-e393-474d-af00-db31882aaeb4
+  
   
 install:
   - source ~/.nvm/nvm.sh && nvm install 0.12
