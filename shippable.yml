@@ -18,6 +18,8 @@ before_install:
   - heroku plugins:install heroku-docker
   - curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
   - chmod +x /usr/local/bin/docker-compose
+  -APP_NAME=obscure-dusk-97601
+  -seurce:57ab9324-e393-474d-af00-db31882aaeb4
   
 install:
   - source ~/.nvm/nvm.sh && nvm install 0.12
